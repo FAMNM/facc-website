@@ -1,4 +1,4 @@
 ---
 title: Home - FIRST&reg; Alumni Collegiate Competition (FACC)
-layout: home
+layout: index 
 ---
