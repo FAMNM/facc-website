@@ -16,6 +16,19 @@ body {
   color: #5a5a5a;
 }
 
+/* NAVBAR STYLES
+-------------------------------------------------- */
+.navbar-brand > img {
+    max-height: 40px;
+}
+
+.navbar-brand {
+    opacity: 0.5;
+}
+
+.navbar-brand:hover {
+    opacity: 1;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
