@@ -1,31 +1,24 @@
 ---
-title: FAMNM Core Team | FIRST® Alumni &amp; Mentors Network at Michigan
-redirect_from: "/events/ri3d"
-people:
+title: FACC Ri3D Teams
+teams:
     - 0:
-        name: "Austin Barkey"
-        standing: "Senior"
-        major: "Mechanical Engineering"
-        quote: "Give me the go ahead. I will make it happen."
-        image: "/img/core/projects.jpg"
+        name: "MRi3D"
+        org: "FIRST Alumni and Mentors Network at Michigan"
+        facebook: "https://www.facebook.com/theFAMNM/"
+        twitter: "https://twitter.com/thefamnm"
+        instagram: "https://www.instagram.com/the.famnm/"
+        website: "https://famnm.club"
+        youtube: ""
+        image: "{{ site.url }}/{{ site.baseurl }}/img/member-orgs/famnm.png"
     - 0:
-        name: "Anuraag Bharadwaj"
-        standing: "Grad Student"
-        major: "Computer Science"
-        quote: "Have the fruit snacks arrived yet?"
-        image: "/img/ri3d/team/anuraag.jpg"
-    - 0:
-        name: "Luke Bilby"
-        standing: "Junior"
-        major: "Mechanical Engineering"
-        quote: "Do what it takes"
-        image: "/img/ri3d/team/luke.jpg"
-    - 0:
-        name: "Colin Bott"
-        standing: "Senior"
-        major: "Mechanical Engineering"
-        quote: "I like robots"
-        image: "/img/ri3d/team/colin.jpg"
+        name: "FIRST Robotics OSU"
+        org: "FIRST Alumni and Robotics at Ohio State"
+        facebook: "https://www.facebook.com/firstroboticsosu/"
+        twitter: "https://twitter.com/firstroboticsosu"
+        instagram: "https://www.instagram.com/firstroboticsosu/"
+        website: "https://firstrobotics.osu.edu"
+        youtube: ""
+        image: "https://via.placeholder.com/96x96"
 ---
 <!doctype html>
 <html lang="en">
@@ -58,28 +51,60 @@ people:
         <div class="content">
             <h1 class="page-header">Competing 2020 Ri3D Teams</h1>
 
-            <h3>Coming soon!</h3>
-			<!-- div class="row">
+			<div class="row">
 			
-			  {% for person in page.people %}
+			  {% for team in page.teams %}
 			  <div class="col-md-6 col-lg-4">
 			    <div class="card">
-			      <img alt="Card image cap" class="card-img-top img-fluid" src="{{ person[0].image }}" />
+			      <img alt="Card image cap" class="card-img-top img-fluid" src="{{ team[0].image }}" />
 			      <div class="card-block">
-			        <h4 class="card-title">{{ person[0].name }}</h4>
+			        <h4 class="card-title">{{ team[0].name }}</h4>
 			        <p class="card-text">
-						{% if person[0].major == "" %}
-						<b>{{ person[0].standing }}</b><br/>
-						{% else %}
-			        	<b>{{ person[0].standing }}: </b> {{ person[0].major }} <br/>
-						{% endif %}
-			        	<i>{{ person[0].quote }}</i>
+                        {{ team[0].org }}
+                        
+                        <ul>
+                            {% if team[0].website != "" %}
+                            <li>
+                                <a href={{ team[0].website }} target="_blank">
+                                    <i class="fas fa-link"></i> Website
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if team[0].youtube != "" %}
+                            <li>
+                                <a href={{ team[0].youtube }} target="_blank">
+                                    <i class="fas fa-youtube"></i> - YouTube
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if team[0].facebook != "" %}
+                            <li>
+                                <a href={{ team[0].facebook }} target="_blank">
+                                    <i class="fab fa-facebook-square"></i> - Facebook
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if team[0].twitter != "" %}
+                            <li>
+                                <a href={{ team[0].twitter }} target="_blank">
+                                    <i class="fab fa-twitter-square"></i> - Twitter
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if team[0].instagram != "" %}
+                            <li>
+                                <a href={{ team[0].instagram }} target="_blank">
+                                    <i class="fab fa-instagram"></i> - Instagram
+                                </a>
+                            </li>
+                            {% endif %}
+						</ul>
 		        	</p>
 			      </div>
 			    </div>
 			  </div>
 			  {% endfor %}
-         	</div-->
+         	</div>
     </div><!-- /.container -->
 
     {% include footer.html %}
