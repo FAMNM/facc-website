@@ -6,19 +6,28 @@ teams:
         org: "FIRST Alumni and Mentors Network at Michigan"
         facebook: "https://www.facebook.com/theFAMNM/"
         twitter: "https://twitter.com/thefamnm"
-        instagram: "https://www.instagram.com/the.famnm/"
+        instagram: "https://www.instagram.com/thefamnm/"
         website: "https://famnm.club"
-        youtube: ""
-        image: "{{ site.url }}/{{ site.baseurl }}/img/member-orgs/famnm.png"
+        youtube: "https://www.youtube.com/channel/UCX8tBxhLFfs_3mZNGgp2UuQ"
+        image: "teams/mri3d.png"
     - 0:
         name: "FIRST Robotics OSU"
         org: "FIRST Alumni and Robotics at Ohio State"
         facebook: "https://www.facebook.com/firstroboticsosu/"
-        twitter: "https://twitter.com/firstroboticsosu"
+        twitter: "https://twitter.com/firstroboticosu"
         instagram: "https://www.instagram.com/firstroboticsosu/"
         website: "https://firstrobotics.osu.edu"
         youtube: ""
-        image: "https://via.placeholder.com/96x96"
+        image: "teams/frosu.png"
+    - 0:
+        name: "FSU Dawgs"
+        org: "FIRST Robotics RSO"
+        facebook: "https://www.facebook.com/fsufirstrobotic/"
+        twitter: "https://twitter.com/fsufirstrobotic"
+        instagram: "https://instagram.com/fsufirstrobotic"
+        website: ""
+        youtube: ""
+        image: "teams/fsu.png"
 ---
 <!doctype html>
 <html lang="en">
@@ -56,7 +65,7 @@ teams:
 			  {% for team in page.teams %}
 			  <div class="col-md-6 col-lg-4">
 			    <div class="card">
-			      <img alt="Card image cap" class="card-img-top img-fluid" src="{{ team[0].image }}" />
+			      <img alt="Card image cap" class="card-img-top img-fluid" src="{{ site.url }}/{{ site.baseurl }}/img/{{ team[0].image }}" />
 			      <div class="card-block">
 			        <h4 class="card-title">{{ team[0].name }}</h4>
 			        <p class="card-text">
@@ -66,14 +75,14 @@ teams:
                             {% if team[0].website != "" %}
                             <li>
                                 <a href={{ team[0].website }} target="_blank">
-                                    <i class="fas fa-link"></i> Website
+                                    <i class="fas fa-link"></i> - Website
                                 </a>
                             </li>
                             {% endif %}
                             {% if team[0].youtube != "" %}
                             <li>
                                 <a href={{ team[0].youtube }} target="_blank">
-                                    <i class="fas fa-youtube"></i> - YouTube
+                                    <i class="fab fa-youtube"></i> - YouTube
                                 </a>
                             </li>
                             {% endif %}
