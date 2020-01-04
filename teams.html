@@ -9,6 +9,7 @@ teams:
         instagram: "https://www.instagram.com/thefamnm/"
         website: "https://famnm.club/events/ri3d/index.html"
         youtube: "https://www.youtube.com/channel/UCX8tBxhLFfs_3mZNGgp2UuQ"
+        twitch: ""
         image: "teams/mri3d.png"
     - 0:
         name: "FIRST Robotics OSU"
@@ -18,6 +19,7 @@ teams:
         instagram: "https://www.instagram.com/firstroboticsosu/"
         website: "https://firstrobotics.osu.edu"
         youtube: ""
+        twitch: ""
         image: "teams/frosu.png"
     - 0:
         name: "FSU Dawgs"
@@ -27,6 +29,7 @@ teams:
         instagram: "https://instagram.com/fsufirstrobotic"
         website: ""
         youtube: ""
+        twitch: ""
         image: "teams/fsu.png"
     - 0:
         name: "FIRST at Michigan State"
@@ -36,6 +39,7 @@ teams:
         instagram: "https://www.instagram.com/firstatmsu/?hl=en"
         website: "https://firstatmsu.org/"
         youtube: ""
+        twitch: ""
         image: "teams/fms.png"
     - 0:
         name: "The Bulldogs"
@@ -45,7 +49,18 @@ teams:
         instagram: "https://www.instagram.com/kettering.ri3d/"
         website: "http://kettering-ri3d.000webhostapp.com"
         youtube: "https://www.youtube.com/channel/UCQ6GjN65GM_PlD7_7ogodfg"
+        twitch: ""
         image: "teams/faak.jpg"
+    - 0:
+        name: "FANGV"
+        org: "GVSU FIRST Alumni"
+        facebook: ""
+        twitter: "https://twitter.com/firstalumgv"
+        instagram: "https://www.instagram.com/firstalumgv/"
+        website: ""
+        youtube: ""
+        twitch: "https://www.twitch.tv/gvsufirstalumni/videos"
+        image: "teams/fangv.png"
 ---
 <!doctype html>
 <html lang="en">
@@ -101,6 +116,13 @@ teams:
                             <li>
                                 <a href={{ team[0].youtube }} target="_blank">
                                     <i class="fab fa-youtube"></i> - YouTube
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if team[0].twitch != "" %}
+                            <li>
+                                <a href={{ team[0].twitch }} target="_blank">
+                                    <i class="fab fa-twitch"></i> - Twitch
                                 </a>
                             </li>
                             {% endif %}
